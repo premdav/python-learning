@@ -1,0 +1,6 @@
+mysite/db.sqlite3
+mysite/main/migrations
+mysite/main/__pycache__
+mysite/mysite/__init__.py
+mysite/mysite/__pycache__
+.vscode/settings.json
