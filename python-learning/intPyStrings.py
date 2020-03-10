@@ -33,3 +33,28 @@ for i, j in enumerate(ex):
 
 di = dict(enumerate(ex))
 [print(i,j) for i, j in enumerate(di)]
+
+# more generators
+def gen ():
+  # generators don't return, they yield
+  yield 'hey'
+  yield 'aye'
+  yield 'travel'
+
+[print(i) for i in gen()]
+
+# try to figure out combo, 
+correct_combo = (4, 2, 7)
+
+def combo_gen():
+  for c1 in range(10):
+    for c2 in range(10):
+      for c3 in range(10):
+        yield (c1, c2, c3)
+
+for (c1, c2, c3) in combo_gen():
+  print(c1, c2, c3)
+  if (c1, c2, c3) == correct_combo:
+    print(f'found combo {correct_combo}')
+    break
+  print(c1, c2, c3)
