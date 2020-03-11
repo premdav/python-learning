@@ -9,6 +9,12 @@ class Blob:
     self.size = random.randrange(4, 8)
     self.color = color
 
+  def __repr__(self):
+    return f'Blob({self.color}, {self.size}, ({self.x}, {self.y}))'
+
+  def __str__(self):
+    return f'blob of color: {self.color}, size: {self.size}, and location: ({self.x}, {self.y})'
+
   def move(self):
     self.move_x = random.randrange(-1, 2)
     self.move_y = random.randrange(-1, 2)
